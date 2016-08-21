@@ -1,0 +1,56 @@
+.search-results-header{
+	width:70%;
+	margin: 0 auto;
+	text-transform: capitalize;
+}
+.result-list{
+	background: lightgrey;
+	width:90%;
+	margin:0 auto;
+	overflow-y: scroll;
+	height:80vh;
+}
+
+.profile-pic{
+	height: 40px;
+	width: 40px;
+}
+.search-results-header{
+	a strong{
+		background:#ffacac;
+		color:black;
+		border-radius: 5px;
+		padding:5px;
+	}
+	h3{
+		color:#f7f7f7;
+	}
+
+}
+.result-list-item{
+	padding:5px;
+	background: white;
+	border:1px solid;
+}
+.col-xs-3 img{
+	vertical-align: middle;
+}
+.error{
+	width: 70%;
+	margin: 0 auto;
+	height:90vh;
+}
+.overlay-error{
+	background: black;
+	opacity: 0.9;
+}
+.col-xs-2 button{
+	@include Button
+}
+.col-xs-2 .cancel{
+	background:tomato;	
+}
+.col-xs-2 .login{
+	background:lightgrey;
+	color:black;
+}

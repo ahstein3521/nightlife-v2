@@ -1,0 +1,38 @@
+	
+	<div class="search-results-header">
+		<a href='/' class='pull-left'>
+			<strong>&lArr;Back</strong>
+		</a>
+		<h3>Results for <span>{{title}}</span></h3>
+	</div>
+	<div class="result-list container">
+		{{#each venues}}
+		<div class="row result-list-item">
+			<div class="col-xs-3">
+				<img class='img' src={{this.image}}>
+			</div>
+			<div class="col-xs-7">
+				<a href='{{this.url}}'>	
+					<p><strong>{{this.name}}</strong></p>
+				</a>
+				<p><small>{{this.address}}</small></p>
+					
+				<span>{{this.snippet}}</span>
+			</div>
+			<div class="col-xs-2" id='{{this._id}}'>
+				<p><strong>{{this.attending.length}} Going</strong></p>
+				{{#if this.RSVP}}
+				<button class="cancel" id='{{this.RSVP._id}}'>Cancel</button>
+		
+				{{else if this.user}}
+					<button class="rsvp-btn">RSVP</button>
+				{{else}}
+					<a href='/auth'>
+						<button class='login'>Sign In</button>
+					</a>
+				{{/if}}	
+
+			</div>
+		</div>				
+		{{/each}}
+	</div>

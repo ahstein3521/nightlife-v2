@@ -1,0 +1,49 @@
+<div class='overlay'></div>
+<nav class="nav">
+	<div class="login-link pull-right">
+	{{#if user}}
+		<span>
+		<img src={{user.photo}} class='profile-pic'>
+			<p><a href="/logout">Log Out</a></p>
+
+		</span>
+		{{else}}
+		<a class='signin' href='/auth'>Sign In </a>
+		{{/if}}
+	</div>	
+
+	<div class="page-header">
+			<h1>NiteLife</h1>
+		<h2>What you up to later? </h2>
+	</div>
+
+</nav>
+
+<form action="/search" method="get">
+	<input type="text" name="city" placeholder="Enter your city here" required>
+	<input type="submit" value="Search">
+</form>
+<section>
+	<div class='container'>
+		<div class="row">
+			<div class="col-xs-4 ">
+				<h3>Search!</h3>
+				<p>Look up the hottest nightclubs in any city or town.</p>
+				<p>Your time is valuable, why waste it thumbing through the Yellow Pages? BORING!</p>
+				<p>Harness the power of Yelp, but with less features.</p>
+				<small>*Search Powered by Yelp</small>
+			</div>	
+			<div class="col-xs-4 ">
+				<h3>Follow!</h3>
+				<p>Stalk friends who have no qualms about publicly exposing future and/or current whereabouts</p>
+				<p>Learn their patterns over time. Knowledge is power.</p>
+				<p>Bump into your ex <em>unexpectedly</em>.</p>
+			</div>
+			<div class="col-xs-4 ">	
+				<h3>Impress!</h3>
+				<p>Virtually "Check In" to places instantly putting to rest any doubts about your social life.</p>
+				<p>Let your ex know you're out on the town having the time of your life - while making sure she still knows where you can be reached</p>
+			</div>	
+		</div>
+	</div>
+</section>	
